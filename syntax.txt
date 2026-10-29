@@ -1,0 +1,108 @@
+
+
+statements 
+    groupings
+    seperators
+    order
+
+
+groupings
+    (fn a b c)
+    fn(a, b, c)
+    if a == b then c
+
+
+
+seperators
+    a b c
+    1, 2, 3
+
+order
+    + 1 2
+    1 + 2
+    1 2 +
+
+
+static a
+static(a)
+(static a)
+
+factorial increment (if (x < 0) then get(y, y) else get(x, x))
+
+if (
+    (x > 0) &&
+    (y > 0)
+) {
+
+}
+else if (
+
+) {
+
+    
+}
+
+
+
+
+{if
+    (x > 0) &&
+    (y > 0)
+.then
+    io.print("Positive vector")
+
+.elif
+    (x < 0) &&
+    (y < 0)
+.then
+    io.print("Negative vector")
+}
+
+if x > 0 then io.print("Positive.");
+if (x > 0) io.print("Positive.");
+{if (x > 0) .then io.print("Positive.")}
+if (x > 0) then io.print("Positive.");
+if (x > 0) { io.print("Positive."); }
+if x > 0 then io.print("Positive.");
+if x > 0 { io.print("Positive."); }
+if (x > 0) io.print("Positive.");
+
+{if (x > 0) (io.print("Positive."))}
+
+{if (x > 0) io.print("Positive.")}
+
+
+
+
+
+fancshun := (key: Str) -> (Bool, Value) {
+    .return(0)
+}
+
+(lm (a: Int32, b: Int32, c: UInt16)
+    ((a + b) * c))
+
+(lm (a: Int32, b: Int32, c: UInt16) (Int32)
+    ((a + b) * c))
+
+lambda := (a: Int32, b: Int32) -> a + b
+lambda := (a: Int32, b: Int32) -> Int32 a + b
+lambda := (a: Int32, b: Int32) -> Int32 { return a + b }
+
+
+nodes : [10]Nodes = [
+    [NodeKind.ADD, 2]
+        [NodeKind.VAR, 0]
+        [NodeKind.VALUE, 0]
+]
+map(nodes, (item, index) ->
+    io.print("%d: %s", index, item.kind.name())
+)
+
+map(nodes, (item: Node, index: Int32) -> Int32 {
+    io.print("%d: %s", index, item.kind.name())
+    .return nodes.count - index
+})
+
+
+[10](Nodes, Index)
