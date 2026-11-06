@@ -39,7 +39,7 @@ else if (
 
 ) {
 
-    
+
 }
 
 
@@ -106,3 +106,61 @@ map(nodes, (item: Node, index: Int32) -> Int32 {
 
 
 [10](Nodes, Index)
+
+
+[10](Nodes Index)
+
+
+(Tree (Bool UInt32 UInt64 (UIntN 128)))
+
+
+Node :: ((kind : NodeKind) (data : (NodeData kind)))
+
+Node :: (
+    (kind : NodeKind)
+    (data : (NodeData kind))
+)
+
+
+
+(let
+    (x : UInt32 = 0)
+    (y : UInt32 = 0)
+    (width : UInt32 = 1920)
+    (height : UInt32 = 1080)
+.in (draw-rect x y (x + width) (y + height)))
+
+(let
+    (x : UInt32 = 0)
+    (y : UInt32 = 0)
+    (width : UInt32 = 1920)
+    (height : UInt32 = 1080)
+.in
+    (rect := (create-rect x y (x + width) (y + height)))
+    (draw-rect rect)
+)
+
+let x : UInt32 = 0;
+    y : UInt32 = 0;
+    width : UInt32 = 1920;
+    height : UInt32 = 1080;
+in {
+    rect := create_rect(x, y, x + width, y + height);
+    draw_rect(rect);
+}
+
+(let
+    (index : (Mut (Index list.count)) = 0)
+.in while (index < list.count)
+    (io.println "%: %" index list[index])
+    (index += 1)
+)
+
+let index : Mut Index(list.count) = 0;
+in while (index < list.count) {
+    io.printf("%: %\n", index, list[count]);
+    index += 1;
+}
+
+
+

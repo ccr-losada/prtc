@@ -2,9 +2,11 @@
 #include "types.h"
 
 char* faces[] = {
+    ">X^P",
     "',:^I",
     "(^u^)",
     "> 3 <",
+
 };
 
 
